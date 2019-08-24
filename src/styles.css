@@ -1,0 +1,65 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*.gradient-background {
+  background: rgb(75,185,132);
+  background: linear-gradient(0deg, rgba(75,185,132,1) 26%, rgba(153,204,129,1) 98%);
+}*/
+.text-bold {
+	font-weight: bold;
+}
+.text-red {
+	color: red;
+}
+
+.ss-button {
+	background-color: #16aa86;
+	color: #fff;
+}
+
+.ss-button:hover {
+	background-color: #4bb984;
+	color: #fff;
+}
+
+.home-banner {
+	background-image: url('/assets/images/home.jpg') !important;
+	background-size: cover;
+	background-position: center;
+	height: 250px;
+	opacity: 0.8;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.search-form{
+	background-color: #fff !important;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+	background-color: #16aa86 !important;
+}
+.mat-tab-label, .mat-tab-link {
+	color: #16aa86 !important;	
+}
+.padding-left-0 {
+	padding-left: 0px !important;
+}
+.padding-right-0 {
+	padding-right: 0px !important;
+}
+.link-color {
+    color: #16aa86 !important;
+    text-decoration: none !important;
+    background-color: transparent!important;
+    cursor: pointer;
+}
+.link-color:hover {
+    color: #4bb984 !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+}

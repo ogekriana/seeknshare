@@ -1,0 +1,227 @@
+<div class="container-fluid mt-3">
+	
+	<div class="row">
+		<div class="col-sm-3 sidemenu" style="height: 300px;">
+	   		<mat-list role="list">
+
+			  <mat-list-item role="listitem" 
+			  	[class.donor-active-container]="activeContainer == 'submission'" 
+			  	(click)="activeContainer='submission'">
+			  	SUBMIT AN ITEM
+			  </mat-list-item>
+			  <mat-list-item role="listitem" 
+			  	[class.donor-active-container]="activeContainer == 'new_item'"
+			  	(click)="activeContainer='new_item'">
+			  	NEW ITEM
+			  </mat-list-item>
+			  <mat-list-item role="listitem" 
+			  	[class.donor-active-container]="activeContainer == 'published'"
+			  	(click)="activeContainer='published'">
+			  	PUBLISHED ITEM
+			  </mat-list-item>
+			  <mat-list-item role="listitem" 
+			  	[class.donor-active-container]="activeContainer == 'rejected'"
+			  	(click)="activeContainer='rejected'">
+			  	REJECTED ITEM
+			  </mat-list-item>
+
+			</mat-list>
+		</div>
+		<div class="col-sm-9" style="background-color: #eaeaea; padding-top: 15px; padding-bottom: 15px;">
+			<div *ngIf="activeContainer == 'submission'">
+				<h2>Second Hand Goods Submission Form </h2>
+				<div class="example-container">
+				  <mat-form-field>
+				    <input matInput placeholder="Year of purchase">
+				  </mat-form-field>
+
+				  <mat-form-field>
+				    <input matInput placeholder="Purchase price">
+				  </mat-form-field>
+
+				  <mat-form-field>
+				    <textarea matInput placeholder="Description (color, size, materials, style, etc)"></textarea>
+				  </mat-form-field>
+
+				  <mat-form-field>
+				    <input matInput placeholder="Duration of use">
+				  </mat-form-field>
+
+				  <mat-form-field>
+				    <input matInput placeholder="Condition">
+				  </mat-form-field>
+				  <div class="row">
+				  	<div class="col-12">
+				  		<!-- <div class="upload-image" style="width: 100%;
+						    height: 80px;
+						    border-style: dashed;
+						    border-width: 5px;
+						    border-color: #d0d0d0;
+						    margin-bottom: 15px;
+						    text-align: center;
+						    color: #d0d0d0;
+						    display: table;">
+						    <div style="display: table-cell; vertical-align: middle; font-size: 20px;">
+				  				upload images
+						    </div>
+				  		</div> -->
+				  		<div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)" style="width: 100%;
+						    height: 80px;
+						    border-style: dashed;
+						    border-width: 5px;
+						    border-color: #d0d0d0;
+						    margin-bottom: 15px;
+						    text-align: center;
+						    color: #d0d0d0;
+						    display: table;">
+				  			<div style="display: table-cell; vertical-align: middle; font-size: 20px;">
+				  				upload images
+						    </div>
+						  <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+						</div>
+						<div  class="files-list" *ngFor="let file of files;let i= index">
+						    <p style="font-size: 13px;"> {{ file }} </p>
+						    <!-- <button class="delete-file" (click)="deleteAttachment(i)"> -->
+						      <img class="delete-file" (click)="deleteAttachment(i)" src="../../assets/images/Recycle_Bin_Full.png">
+						    <!-- </button> -->
+						 </div>
+				  	</div>
+				  </div>
+				  	<button mat-button class="ss-button btn-block" (click)="activeContainer='new_item'">Submit</button>
+
+				</div>
+			</div>
+
+			<div *ngIf="activeContainer == 'new_item'">
+				WAITING FOR APPROVAL
+			    <div class="example-container">
+	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    				<div class="col-12">
+							<mat-divider></mat-divider>
+							<div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip>pending</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+	    				</div>
+	    			</div>
+
+	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    				<div class="col-12">
+							<mat-divider></mat-divider>
+							<div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip>pending</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+	    				</div>
+	    			</div>
+			    </div>
+			</div>
+
+			<div *ngIf="activeContainer == 'published'">
+				LIST OF PUBLISHED GOODS
+				<div class="example-container">
+	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    				<div class="col-12">
+							<mat-divider></mat-divider>
+							<div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip color="primary" selected>Published</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+	    				</div>
+	    			</div>
+
+	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    				<div class="col-12">
+							<mat-divider></mat-divider>
+							<div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip color="primary" selected>Published</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+	    				</div>
+	    			</div>
+			    </div>
+			</div>
+
+			<div *ngIf="activeContainer == 'rejected'">
+				LIST OF REJECTED GOODS
+				<div class="example-container">
+	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    				<div class="col-12">
+							<mat-divider></mat-divider>
+							<div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip color="accent" selected>Rejected</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+						    <div class="row mt-2 mb-2">
+						    	<div class="col-2 col-md-3 col-lg-6">
+						    		<img style="width: 100%; height: auto;" src="./assets/images/home1.jpg">
+						    	</div>
+						    	<div class="col-10 col-md-9 col-lg-6" style="padding-left: 0px;">
+						    		<h5 mat-line style="margin-bottom: 0px !important;">Vintage Denim Jacket</h5>
+						    		<div mat-line class="text-red"> Rp300.000 </div>
+						    		<div mat-line>
+						    			<mat-chip-list aria-label="status">
+										  <mat-chip color="accent" selected>Rejected</mat-chip>
+										</mat-chip-list>
+						    		</div>
+						    	</div>
+						    </div>
+	    				</div>
+	    			</div>
+
+			    </div>
+			</div>
+
+		</div>
+	</div>
+</div>

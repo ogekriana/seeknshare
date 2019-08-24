@@ -1,0 +1,77 @@
+<div class="gradient-background" style="height: 100% !important;">
+	
+	<mat-grid-list cols="7" rowHeight="500px">
+		<mat-grid-tile [colspan]="1" [rowspan]="1"></mat-grid-tile>
+
+		<mat-grid-tile
+		    [colspan]="5"
+		    [rowspan]="1">
+
+			<mat-card class="carrot-login-card">
+				<form id="user-form" [formGroup]="loginForm" (ngSubmit)="submitLogin()" autocomplete="off">
+					<mat-card-actions>
+						<div class="login-logo">
+					    	<img src="./assets/images/ss-logo.png" alt="">
+						</div>
+					</mat-card-actions>
+
+					<mat-card-content class="mb-0">
+						<div class="form">
+						  	<mat-form-field appearance="outline" class="full-width">
+				                <mat-label>Username</mat-label>
+				                <input matInput
+				                  placeholder="Username"
+				                  formControlName="username"
+				                  id="username-form"
+				                  autocomplete="off"
+				                  required>
+						    	<mat-icon matSuffix>person</mat-icon>
+						    	<mat-error *ngIf="loginForm.controls['username'].invalid">
+						    		Username is required
+						    	</mat-error>
+						  	</mat-form-field>
+
+						  	<mat-form-field appearance="outline" class="full-width">
+				                <mat-label>Password</mat-label>
+				                <input matInput
+				                  placeholder="Password"
+				                  [type]="isHidden ? 'password' : 'text'"
+				                  formControlName="password"
+				                  id="password-form"
+				                  autocomplete="off"
+				                  required>
+							    <mat-icon matSuffix (click)="hidePassword(isHidden)">{{isHidden ? 'visibility_off' : 'visibility'}}</mat-icon>
+							    <mat-error *ngIf="loginForm.controls['password'].invalid">
+							    	Password is required
+							    </mat-error>
+							</mat-form-field>
+						</div>
+					</mat-card-content>
+
+					<mat-card-actions class="carrot-action-btn">
+			          <button class="btn-block btn ss-button"
+			            mat-flat-button
+			            [disabled]="!loginForm.valid"
+			            id="login-button"
+			            type="submit">
+			            <mat-icon matSuffix>lock</mat-icon>
+			            LOG IN
+			          </button>
+			          <mat-grid-list cols="7" rowHeight="30px">
+			          	<mat-grid-tile [colspan]="7" [rowspan]="1">
+			          		<small>
+			          			Don't have an account? <a class="link-color" routerLink="/signup">Sign up</a>.
+			          		</small>
+			          	</mat-grid-tile>
+			          </mat-grid-list>
+					</mat-card-actions>
+				</form>
+			</mat-card>
+
+
+		</mat-grid-tile>
+
+		<mat-grid-tile [colspan]="1" [rowspan]="1"></mat-grid-tile>
+	</mat-grid-list>
+</div>
+

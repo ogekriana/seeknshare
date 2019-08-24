@@ -1,0 +1,93 @@
+<mat-grid-list cols="1" rowHeight="120px" class="home-banner">
+  <mat-grid-tile [colspan]="1" [rowspan]="1">
+    
+  </mat-grid-tile>
+</mat-grid-list>
+
+<nav mat-tab-nav-bar>
+	
+  <a mat-tab-link
+     routerLink="/dashboard/seeker"
+     routerLinkActive #rla="routerLinkActive"
+     [active]="rla.isActive"
+     [routerLinkActiveOptions]="{ exact: true }">
+    Seeker
+  </a>
+
+  <a mat-tab-link
+     routerLink="/dashboard/donor"
+     routerLinkActive #rlb="routerLinkActive"
+     [active]="rlb.isActive"
+     [routerLinkActiveOptions]="{ exact: true }">
+    Donor
+  </a>
+  
+</nav>
+<router-outlet></router-outlet>
+<!-- <mat-tab-group>
+  	<mat-tab label="Donor">
+  		<div class="container-fluid mt-3">
+  			
+	  		<div class="row">
+	  			<div class="col-sm-3" style="height: 300px;">
+			   		<mat-list role="list">
+					  <mat-list-item role="listitem">SUBMIT AN ITEM</mat-list-item>
+					  <mat-list-item role="listitem">NEW ITEM</mat-list-item>
+					  <mat-list-item role="listitem">PUBLISHED ITEM</mat-list-item>
+					  <mat-list-item role="listitem">REJECTED ITEM</mat-list-item>
+					</mat-list>
+	  			</div>
+	  			<div class="col-sm-9" style="background-color: #eaeaea; padding-top: 15px; padding-bottom: 15px;">
+	  				<h2>Second Hand Goods Submission Form </h2>
+	  				<div class="example-container">
+					  <mat-form-field>
+					    <input matInput placeholder="Year of purchase">
+					  </mat-form-field>
+
+					  <mat-form-field>
+					    <input matInput placeholder="Purchase price">
+					  </mat-form-field>
+
+					  <mat-form-field>
+					    <textarea matInput placeholder="Description (color, size, materials, style, etc)"></textarea>
+					  </mat-form-field>
+
+					  <mat-form-field>
+					    <input matInput placeholder="Duration of use">
+					  </mat-form-field>
+
+					  <mat-form-field>
+					    <input matInput placeholder="Condition">
+					  </mat-form-field>
+
+					  	<label>Upload Images</label>
+					  	<button mat-stroked-button>Submit</button>
+
+					</div>
+
+	  			</div>
+	  		</div>
+  		</div>
+	</mat-tab>
+
+
+  	<mat-tab label="Seeker">
+  		
+  		<div class="container-fluid mt-3">
+  			
+	  		<div class="row">
+	  			<div class="col-sm-3" style="height: 300px;">
+			   		<mat-list role="list">
+					  <mat-list-item role="listitem">Orders</mat-list-item>
+					  <mat-list-item role="listitem">Bills</mat-list-item>
+					  <mat-list-item role="listitem">Wishlist</mat-list-item>
+					</mat-list>
+	  			</div>
+	  			<div class="col-sm-9" style="background-color: #eaeaea; height: 300px; padding-top: 15px; padding-bottom: 15px;">
+	  			CONTENT SEEKER HERE
+	  			</div>
+	  		</div>
+  		</div>
+
+  	</mat-tab>
+</mat-tab-group> -->

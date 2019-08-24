@@ -1,0 +1,55 @@
+.login-logo{
+	text-align: center;
+}
+
+.login-logo img {
+	width: 70%;
+	height: auto;
+}
+
+.carrot-login-card {
+  max-width: 465px;
+  padding: 35px;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.carrot-action-btn {
+  margin: 0px;
+  padding: 0rem;
+}
+
+.btn-action {
+  width: 100%;
+  height: 47px;
+  background-color: #4595cf;
+}
+
+.btn-action .material-icons {
+  font-size: 16px;
+  line-height: 1.3;
+}
+
+.carrot-input-login {
+  width: 100%;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.link-color {
+    color: #4595cf !important;
+    text-decoration: none !important;
+    background-color: transparent!important;
+}
+
+.link-color:hover {
+    color: #99d4ff !important;
+    text-decoration: none !important;
+    background-color: transparent !important;
+}
