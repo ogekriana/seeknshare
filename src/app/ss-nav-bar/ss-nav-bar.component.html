@@ -36,7 +36,15 @@
         </span>
 
         <span *ngIf="isLogin">
-          <a mat-button class="link-color">Welcome Maria!</a>
+          <a class="link-color" routerLink="/">
+            <mat-icon style="vertical-align: middle; font-size: 20px;">home</mat-icon>
+          </a>
+        </span>
+        <span style="padding-right: 5px;" class="link-color" *ngIf="isLogin">
+          |
+        </span>
+        <span *ngIf="isLogin">
+          <a style="font-size: 12px;" class="link-color" routerLink="/dashboard/donor">Welcome Maria!</a>
         </span>
 
       </mat-toolbar-row>

@@ -20,6 +20,7 @@ import {
   MatRadioModule,
   MatChipsModule
 } from '@angular/material';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -98,6 +99,7 @@ const appRoutes: Routes = [
       appRoutes
       // { enableTracing: true } // <-- debugging purposes only
     ),
+    SweetAlert2Module.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     MatGridListModule,
