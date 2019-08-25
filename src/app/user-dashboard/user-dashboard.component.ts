@@ -30,19 +30,19 @@ export class UserDashboardComponent {
             price: '200.000' 
           },
           { title: 'Card 3', cols: 3, rows: 1, 
-            image: './assets/images/home3.jpg',
-            caption: 'Simple clothes',
+            image: './assets/images/bags.jpg',
+            caption: 'Mini cute bag',
             price: '500.000' 
           },
           { title: 'Card 3', cols: 3, rows: 1,
-            image: './assets/images/home1.jpg',
-            caption: 'Simple clothes',
+            image: './assets/images/leather.jpg',
+            caption: 'Leather Jacket',
             price: '600.000'  
           },
           { title: 'Card 4', cols: 3, rows: 1,
-            image: './assets/images/home2.jpg',
-            caption: 'Simple clothes',
-            price: '50.000' 
+            image: './assets/images/boots.jpg',
+            caption: 'Woman boots',
+            price: '2.500.000' 
           }
         ];
       }
@@ -65,19 +65,19 @@ export class UserDashboardComponent {
             price: '200.000' 
           },
           { title: 'Card 3', cols: 1, rows: 1, 
-            image: './assets/images/home3.jpg',
-            caption: 'Simple clothes',
+            image: './assets/images/bags.jpg',
+            caption: 'Mini cute bag',
             price: '500.000' 
           },
           { title: 'Card 3', cols: 1, rows: 1,
-            image: './assets/images/home1.jpg',
-            caption: 'Simple clothes',
+            image: './assets/images/leather.jpg',
+            caption: 'Leather Jacket',
             price: '600.000'  
           },
           { title: 'Card 4', cols: 1, rows: 1,
-            image: './assets/images/home2.jpg',
-            caption: 'Simple clothes',
-            price: '50.000' 
+            image: './assets/images/boots.jpg',
+            caption: 'Woman boots',
+            price: '2.500.000' 
           }
       ];
     })

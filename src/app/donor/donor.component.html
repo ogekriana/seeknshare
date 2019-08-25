@@ -27,11 +27,11 @@
 
 			</mat-list>
 		</div>
-		<div class="col-sm-9" style="background-color: #eaeaea; padding-top: 15px; padding-bottom: 15px;">
+		<div class="col-sm-9" style="padding: 15px 30px;">
 			<div *ngIf="activeContainer == 'submission'">
 				<h5>Second Hand Goods Submission Form </h5>
-				<mat-divider></mat-divider>
-				<div class="example-container">
+				
+				<div class="example-container mt-4">
 				  <mat-form-field>
 				    <input matInput placeholder="Year of purchase">
 				  </mat-form-field>
@@ -54,7 +54,7 @@
 				  <div class="row">
 				  	<div class="col-12">
 				  		<div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)" style="width: 100%;
-						    height: 80px;
+						    height: 200px;
 						    border-style: dashed;
 						    border-width: 5px;
 						    border-color: #d0d0d0;
@@ -82,9 +82,9 @@
 
 			<div *ngIf="activeContainer == 'new_item'">
 				<h5>Waiting for Approval</h5>
-				<mat-divider></mat-divider>
-			    <div class="example-container">
-	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+				
+			    <div class="example-container mt-4">
+	    			<div class="row mb-3" style="border: 1px solid #a7a7a7; width: 100%;padding: 10px;">
 	    				<div class="col-12">
 							<div class="row mt-2 mb-2">
 								<div class="col-12 col-sm-8 col-lg-6">
@@ -112,9 +112,9 @@
 
 			<div *ngIf="activeContainer == 'published'">
 				<h5>List of Published Goods</h5>
-				<mat-divider></mat-divider>
-				<div class="example-container">
-	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+				
+				<div class="example-container mt-4">
+	    			<div class="row mb-3" style="border: 1px solid #a7a7a7; width: 100%;padding: 10px;">
 	    				<div class="col-12">
 							<div class="row mt-2 mb-2">
 								<div class="col-12 col-sm-8 col-lg-6">
@@ -138,7 +138,7 @@
 	    				</div>
 	    			</div>
 					<mat-divider></mat-divider>
-	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+	    			<div class="row mb-3" style="border: 1px solid #a7a7a7; width: 100%;padding: 10px;">
 	    				<div class="col-12">
 						    <div class="row mt-2 mb-2">
 								<div class="col-12 col-sm-8 col-lg-6">
@@ -166,9 +166,9 @@
 
 			<div *ngIf="activeContainer == 'rejected'">
 				<h5>List of Rejected Goods</h5>
-				<mat-divider></mat-divider>
-				<div class="example-container">
-	    			<div class="row mb-3" style="border: 1px solid #eaeaea; width: 100%;padding: 10px;">
+				
+				<div class="example-container mt-4">
+	    			<div class="row mb-3" style="border: 1px solid #a7a7a7; width: 100%;padding: 10px;">
 	    				<div class="col-12">
 							<div class="row mt-2 mb-2">
 								<div class="col-12 col-sm-8 col-lg-6">
